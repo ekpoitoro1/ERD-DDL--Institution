@@ -85,3 +85,7 @@ ALTER TABLE offerings ADD FOREIGN KEY(course_id) REFERENCES course(id);
 
 ALTER TABLE offerings ADD FOREIGN KEY(instructor_id) REFERENCES instructor(id);
 
+-- Constraint Check For Grade
+ALTER TABLE enrollment ADD CONSTRAINT chk_grade CHECK (grade IN ('A', 'B', 'C', 'D', 'F'));
+
+
